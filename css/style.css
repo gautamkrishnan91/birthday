@@ -1,3 +1,7 @@
+a, a:visited, a:link, a:active {
+	color: #a3e599;
+	text-decoration: underline;
+}
 .bg{
 	opacity: 0.07;
 	position: absolute;
@@ -13,6 +17,75 @@
 	background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
 	linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
 	background-size:20px 20px; background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.498039) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, 0.498039) 50%, transparent 50%); background-color: white; background-size: 20px;
+}
+.top-message{
+	font-family: 'Roboto', sans-serif;
+	width: 606px;
+	height: 50px;
+	font-size: 48px;
+	position: absolute;
+	text-align: center;
+	margin-top: -110px;
+	color: #888;
+	margin-left: -100px;
+	font-weight: 100;
+}
+.bottom-message{
+	font-family: 'Roboto', sans-serif;
+	width: 520px;
+	height: 50px;
+	font-size: 18px;
+	position: absolute;
+	text-align: center;
+	color: #666;
+	top: 50%;
+	left: 50%;
+	font-weight: 300;
+	z-index: 30000;
+	margin-left: -260px;
+	line-height: 28px;
+	opacity: 1;
+	margin-top: 140px;
+	
+}
+.banner {
+	position: fixed;
+	width: 100%;
+	background: #000;
+	top: 0;
+	color: #FFF;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 10px;
+	font-weight: lighter;
+	font-size: 13px;
+	z-index: 10;
+}
+.social-banner {
+	position: fixed;
+	width: 100%;
+	background: #000;
+	bottom: 0;
+	color: #FFF;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 10px;
+	font-weight: lighter;
+	font-size: 13px;
+	z-index: 10;
+}
+.social-banner span.text {
+	margin-right: 20px;
+	position: relative;
+	top: -4px;
+}
+.birthday-wrapper{
+	width: 406px;
+	height: 260px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -130px 0 0 -203px;
 }
 .cake-wrapper{
 	width: 180px;
@@ -136,7 +209,9 @@
 	left: 50%;
 	margin: -100px 0 0 -100px;
 	display: none;
+	animation: pizza-animate 2s linear infinite;
 	-webkit-animation: pizza-animate 2s linear infinite;
+	-moz-animation: pizza-animate 2s linear infinite;
 }
 .pizza-crust{
 	background: #f8c431;
@@ -300,7 +375,9 @@
 	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 	position: absolute;
 	margin: 96px 0 0 -8px;
+	animation: icecream-animate 2s linear infinite;
 	-webkit-animation: icecream-animate 2s linear infinite;
+	-moz-animation: icecream-animate 2s linear infinite;
 }
 .icecream-drop:after{
 	content: "";
@@ -322,7 +399,9 @@
 	top: 50%;
 	left: 50%;
 	display: none;
+	animation: gift-animate 1s linear infinite;
 	-webkit-animation: gift-animate 1s linear infinite;
+	-moz-animation: gift-animate 1s linear infinite;
 }
 .gift{
 	width: 180px;
@@ -509,7 +588,9 @@
 	border-color: #EC918E transparent transparent transparent;
 	position: absolute;
 	margin: 0 0 0 60px;
+	animation: balloon1-animate 2s linear infinite;
 	-webkit-animation: balloon1-animate 2s linear infinite;
+	-moz-animation: balloon1-animate 2s linear infinite;
 }
 .balloon:after{
 	content: "";
@@ -568,7 +649,9 @@
 	border-color: #f8e392 transparent transparent transparent;
 	position: absolute;
 	margin: 90px 0 0 0px;
+	animation: balloon2-animate 2s linear infinite;
 	-webkit-animation: balloon2-animate 2s linear infinite;
+	-moz-animation: balloon2-animate 2s linear infinite;
 }
 .balloon2:after{
 	content: "";
@@ -627,7 +710,9 @@
 	border-color: #f8e392 transparent transparent transparent;
 	position: absolute;
 	margin: 0 0 0 270px;
+	animation: balloon1-animate 2s linear infinite;
 	-webkit-animation: balloon1-animate 2s linear infinite;
+	-moz-animation: balloon1-animate 2s linear infinite;
 }
 .balloon3:after{
 	content: "";
@@ -686,7 +771,9 @@
 	border-color: #EC918E transparent transparent transparent;
 	position: absolute;
 	margin: 90px 0 0 330px;
+	animation: balloon2-animate 2s linear infinite;
 	-webkit-animation: balloon2-animate 2s linear infinite;
+	-moz-animation: balloon2-animate 2s linear infinite;
 }
 .balloon4:after{
 	content: "";
@@ -881,11 +968,59 @@
 		margin-top: 100px;
 	}
 }
+@-moz-keyframes balloon1-animate{
+	0%{
+		margin-top: 0;
+	}
+	50%{
+		margin-top: 10px;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+@-moz-keyframes balloon2-animate{
+	0%{
+		margin-top: 100px;
+	}
+	50%{
+		margin-top: 90px;
+	}
+	100%{
+		margin-top: 100px;
+	}
+}
+@keyframes balloon1-animate{
+	0%{
+		margin-top: 0;
+	}
+	50%{
+		margin-top: 10px;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+@keyframes balloon2-animate{
+	0%{
+		margin-top: 100px;
+	}
+	50%{
+		margin-top: 90px;
+	}
+	100%{
+		margin-top: 100px;
+	}
+}
 .flame-anim1{
+	animation: candle1-animate 1s linear infinite;
 	-webkit-animation: candle1-animate 1s linear infinite;
+	-moz-animation: candle1-animate 1s linear infinite;
 }
 .flame-anim2{
+	animation: candle2-animate 1s linear infinite;
 	-webkit-animation: candle2-animate 1s linear infinite;
+	-moz-animation: candle2-animate 1s linear infinite;
 }
 @-webkit-keyframes candle1-animate{
 	0%{
@@ -909,6 +1044,72 @@
 		margin-top: -30px;
 	}
 }
+@-moz-keyframes candle1-animate{
+	0%{
+		margin-top: -26px;
+	}
+	50%{
+		margin-top: -30px;
+	}
+	100%{
+		margin-top: -26px;
+	}
+}
+@-moz-keyframes candle2-animate{
+	0%{
+		margin-top: -30px;
+	}
+	50%{
+		margin-top: -26px;
+	}
+	100%{
+		margin-top: -30px;
+	}
+}
+@-o-keyframes candle1-animate{
+	0%{
+		margin-top: -26px;
+	}
+	50%{
+		margin-top: -30px;
+	}
+	100%{
+		margin-top: -26px;
+	}
+}
+@-o-keyframes candle2-animate{
+	0%{
+		margin-top: -30px;
+	}
+	50%{
+		margin-top: -26px;
+	}
+	100%{
+		margin-top: -30px;
+	}
+}
+@keyframes candle1-animate{
+	0%{
+		margin-top: -26px;
+	}
+	50%{
+		margin-top: -30px;
+	}
+	100%{
+		margin-top: -26px;
+	}
+}
+@keyframes candle2-animate{
+	0%{
+		margin-top: -30px;
+	}
+	50%{
+		margin-top: -26px;
+	}
+	100%{
+		margin-top: -30px;
+	}
+}
 @-webkit-keyframes pizza-animate{
 	0%{
 		-webkit-transform: rotate(0deg);
@@ -918,6 +1119,31 @@
 	}
 	100%{
 		-webkit-transform: rotate(0deg);
+	}
+}
+@-moz-keyframes pizza-animate{
+	0%{
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	50%{
+		-moz-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	100%{
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+@keyframes pizza-animate{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(5deg);
+	}
+	100%{
+		transform: rotate(0deg);
 	}
 }
 @-webkit-keyframes gift-animate{
@@ -942,7 +1168,83 @@
 		margin-top: -58px;
 	}
 }
+.bottom-message a, .bottom-message a:visited, .bottom-message a:focus, .bottom-message a:hover, .bottom-message a:active{
+	color: #2980b9;
+}
+@-moz-keyframes gift-animate{
+	0%{
+		-moz-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+		margin-top: -58px;
+	}
+	25%{
+		-moz-transform: rotate(00deg);
+		transform: rotate(00deg);
+		margin-top: -80px;
+	}
+	50%{
+		-moz-transform: rotate(4deg);
+		transform: rotate(4deg);
+		margin-top: -58px;
+	}
+	75%{
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+		margin-top: -80px;
+	}
+	100%{
+		-moz-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+		margin-top: -58px;
+	}
+}
+@keyframes gift-animate{
+	0%{
+		transform: rotate(-4deg);
+		margin-top: -58px;
+	}
+	25%{
+		transform: rotate(00deg);
+		margin-top: -80px;
+	}
+	50%{
+		transform: rotate(4deg);
+		margin-top: -58px;
+	}
+	75%{
+		transform: rotate(0deg);
+		margin-top: -80px;
+	}
+	100%{
+		transform: rotate(-4deg);
+		margin-top: -58px;
+	}
+}
 @-webkit-keyframes icecream-animate{
+	0%{
+		margin: 96px 0 0 -8px;
+	}
+	100%{
+		margin: 200px 0 0 -8px;
+	}
+}
+@-moz-keyframes icecream-animate{
+	0%{
+		margin: 96px 0 0 -8px;
+	}
+	100%{
+		margin: 200px 0 0 -8px;
+	}
+}
+@-o-keyframes icecream-animate{
+	0%{
+		margin: 96px 0 0 -8px;
+	}
+	100%{
+		margin: 200px 0 0 -8px;
+	}
+}
+@keyframes icecream-animate{
 	0%{
 		margin: 96px 0 0 -8px;
 	}
